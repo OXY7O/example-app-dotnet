@@ -1,0 +1,3 @@
+{
+  "profileKey":"dotnet-webapi","governanceBaseline":"platform-governance@v1.3.0","workflowRelease":"platform-workflow@v0.5.1","workflowSha":"d0f9bb9394796a22409ec9029182bec542615adc","maturity":"pilot","compatibility":"not-validated","deploymentEnabled":false,"secretsRequired":false
+}

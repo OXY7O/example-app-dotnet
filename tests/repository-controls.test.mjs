@@ -6,7 +6,7 @@ test("repository policy declares the governed no-release boundary", () => {
   const policy = JSON.parse(fs.readFileSync("repository-policy.json", "utf8"));
   assert.equal(policy.profileKey, "dotnet-webapi");
   assert.equal(policy.governanceBaseline, "platform-governance@v1.3.0");
-  assert.equal(policy.workflowRelease, "platform-workflow@v0.5.1");
+  assert.equal(policy.workflowRelease, "platform-workflow@v0.5.2");
   assert.equal(policy.deploymentEnabled, false);
   assert.equal(policy.secretsRequired, false);
 });
@@ -14,7 +14,7 @@ test("repository policy declares the governed no-release boundary", () => {
 test("thin caller is immutable, read-only, and uses no privileged context", () => {
   const source = fs.readFileSync(".github/workflows/ci.yml", "utf8");
   assert.match(source, /permissions:\s*\n\s+contents: read/);
-  assert.match(source, /ci-profile-dotnet-webapi\.yml@d0f9bb9394796a22409ec9029182bec542615adc/);
+  assert.match(source, /ci-profile-dotnet-webapi\.yml@451f980e3f4b9d926b7b340b42f7f611d75db1d2/);
   assert.doesNotMatch(source, /secrets\s*:\s*inherit|id-token\s*:\s*write|\benvironment\s*:|\bdeploy(?:ment)?\b/i);
 });
 

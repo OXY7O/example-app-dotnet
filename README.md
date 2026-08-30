@@ -1,6 +1,6 @@
 # OXY7O Example App .NET Web API
 
-[![Profile](https://img.shields.io/badge/profile-dotnet--webapi-512bd4)](https://github.com/OXY7O/platform-workflow/tree/d0f9bb9394796a22409ec9029182bec542615adc/docs/profiles/dotnet-webapi)
+[![Profile](https://img.shields.io/badge/profile-dotnet--webapi-512bd4)](https://github.com/OXY7O/platform-workflow/tree/451f980e3f4b9d926b7b340b42f7f611d75db1d2/docs/profiles/dotnet-webapi)
 [![SDK](https://img.shields.io/badge/.NET%20SDK-10.0.110-512bd4)](global.json)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-pilot-f59e0b)](repository-policy.json)
 [![Tanpa deployment](https://img.shields.io/badge/deployment-tidak%20tersedia-6b7280)](repository-policy.json)
@@ -11,7 +11,7 @@ Contoh consumer canonical untuk reusable profile `.NET Web API`. Repository ini 
 
 ```text
 platform-governance v1.3.0
-  -> platform-workflow v0.5.1 / commit d0f9bb9...
+  -> platform-workflow v0.5.2 / commit 451f980...
     -> example-app-dotnet (repository ini)
       -> pola adopsi untuk repository aplikasi
 ```
@@ -83,7 +83,7 @@ Struktur evidence berada di [schema evidence](docs/evidence/pilot-evidence.schem
 - [ ] Semua `packages.lock.json` committed dan locked restore lulus.
 - [ ] Format, build, test, coverage, vulnerable, dan deprecated checks lulus.
 - [ ] Caller hanya `contents: read`, tanpa secret dan privileged context.
-- [ ] Workflow dipin ke `d0f9bb9394796a22409ec9029182bec542615adc`.
+- [ ] Workflow dipin ke `451f980e3f4b9d926b7b340b42f7f611d75db1d2`.
 - [ ] Artifact dan manifest cocok dengan source/workflow SHA.
 - [ ] Status `ci-qualified` tidak dipakai sebagai izin deployment.
 

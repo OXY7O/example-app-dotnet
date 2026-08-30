@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "runId": 33317740112,
+  "runUrl": "https://github.com/OXY7O/example-app-dotnet/actions/runs/33317740112",
+  "sourceSha": "d53efde127256baed58818459649537775b12c8d",
+  "workflowSha": "451f980e3f4b9d926b7b340b42f7f611d75db1d2",
+  "canonical": {
+    "readiness": "ci-qualified",
+    "artifactCount": 1,
+    "artifactId": 9733989310,
+    "artifactName": "example-api_0.1.0_net10.0_linux-x64.tar.gz",
+    "artifactDigest": "sha256:d231a41202d31715c679621b9adfeb120bae19e181eb10b02d223aeea4c1d6d1",
+    "retentionExpiresAt": "2026-09-13T14:47:19Z"
+  },
+  "preview": {
+    "sdkVersion": "11.0.100-preview.6.26359.118",
+    "conclusion": "passed",
+    "blocking": false,
+    "artifactCount": 0
+  },
+  "deploymentAuthorized": false
+}

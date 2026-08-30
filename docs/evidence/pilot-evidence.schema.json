@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+  "required":["schemaVersion","runId","runUrl","sourceSha","workflowSha","canonical","preview","deploymentAuthorized"],
+  "properties":{"schemaVersion":{"const":"1.0"},"runId":{"type":"integer"},"runUrl":{"type":"string"},"sourceSha":{"pattern":"^[a-f0-9]{40}$"},"workflowSha":{"pattern":"^[a-f0-9]{40}$"},"canonical":{"type":"object"},"preview":{"type":"object"},"deploymentAuthorized":{"const":false}}
+}

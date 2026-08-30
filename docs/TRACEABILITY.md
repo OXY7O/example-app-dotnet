@@ -9,5 +9,7 @@
 | Canonical SDK | `10.0.110` |
 | Target | `net10.0/linux-x64/framework-dependent` |
 | Readiness | `ci-qualified` |
+| Actual pilot run | [GitHub Actions run 33317740112](https://github.com/OXY7O/example-app-dotnet/actions/runs/33317740112) |
+| Actual evidence | [`docs/evidence/pilot-evidence.actual.json`](evidence/pilot-evidence.actual.json) |
 
 Repository ini tidak membuktikan production readiness, deployment authorization, compatibility verified, atau operational compliance.

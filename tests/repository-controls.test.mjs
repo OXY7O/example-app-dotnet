@@ -30,3 +30,16 @@ test("README provides the complete developer journey and evidence boundary", () 
   for (const text of ["Quick start", "Endpoint", "Compatibility", "Required checks", "Artifact", "Adopsi", "Onboarding", "Troubleshooting", "Safe evidence", "Tanpa deployment"]) assert.match(readme, new RegExp(text, "i"));
   assert.ok((readme.split("\n").slice(0, 12).join("\n").match(/!\[/g) ?? []).length <= 5);
 });
+
+test("actual pilot evidence is immutable, artifact-qualified, and deployment-free", () => {
+  const evidence = JSON.parse(fs.readFileSync("docs/evidence/pilot-evidence.actual.json", "utf8"));
+  assert.equal(evidence.runId, 33317740112);
+  assert.match(evidence.sourceSha, /^[a-f0-9]{40}$/);
+  assert.equal(evidence.workflowSha, "451f980e3f4b9d926b7b340b42f7f611d75db1d2");
+  assert.equal(evidence.canonical.readiness, "ci-qualified");
+  assert.equal(evidence.canonical.artifactCount, 1);
+  assert.match(evidence.canonical.artifactDigest, /^sha256:[a-f0-9]{64}$/);
+  assert.equal(evidence.preview.blocking, false);
+  assert.equal(evidence.preview.artifactCount, 0);
+  assert.equal(evidence.deploymentAuthorized, false);
+});

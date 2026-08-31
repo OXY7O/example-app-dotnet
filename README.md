@@ -7,6 +7,19 @@
 
 Contoh consumer canonical untuk reusable profile `.NET Web API`. Repository ini menunjukkan hubungan nyata dari governance, implementasi workflow, thin caller, source/test, application package, sampai Safe evidence—tanpa menyisipkan logika CI pusat ke repository aplikasi.
 
+## Peran dalam provisioning
+
+Repository ini adalah permanent compatibility dan certification fixture untuk
+profile `.NET Web API`. Ia menguji workflow SHA, SDK canonical/preview lane,
+application-package boundary, dan Safe evidence. Source-nya tidak disalin ke
+repository developer dan bukan template aplikasi.
+
+Platform Provisioning hanya dapat memakai hasil pilot untuk exact approved bundle
+yang masih valid. Kombinasi baru atau perubahan behavior membutuhkan sandbox
+validation. Deployment dan security end-to-end belum tersedia, sehingga repository
+ini belum menerbitkan certification reusable untuk deployment atau security
+profile penuh.
+
 ## Hubungan repository
 
 ```text
@@ -68,11 +81,12 @@ Canonical lane menghasilkan tepat satu `example-api_0.1.0_net10.0_linux-x64.tar.
 
 Struktur evidence berada di [schema evidence](docs/evidence/pilot-evidence.schema.json) dan [contoh sanitized](docs/evidence/pilot-evidence.example.json). Evidence aktual ditambahkan setelah pilot GitHub Actions berhasil. Evidence tidak boleh berisi token, secret, private key, atau environment value.
 
-## Adopsi
+## Cara mempelajari pola
 
 1. Cocokkan workload dengan controller-based ASP.NET Core Web API.
 2. Salin struktur `global.json`, solution, project, test, dan lock file.
-3. Salin hanya thin caller; jangan salin implementasi workflow pusat.
+3. Pelajari thin caller; governed provisioning akan memasangnya dari template
+   ketika layanan tersedia.
 4. Pin workflow ke full commit SHA yang disetujui.
 5. Sesuaikan path, nama artifact, version, coverage, dan retention dalam schema.
 6. Verifikasi satu canonical artifact dan nol preview artifact.
